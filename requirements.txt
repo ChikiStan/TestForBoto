@@ -11,3 +11,4 @@ pathspec==0.11.1
 platformdirs==3.5.3
 pycodestyle==2.10.0
 pyflakes==3.0.1
+pymorphy3>=1.2.0

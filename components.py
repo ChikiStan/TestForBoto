@@ -1,13 +1,25 @@
+from statistics import mean
+
 import emoji
+import pymorphy3
 
 from dictionary import docs
 
 
 class TextChecker:
-    text: str
-
     def __init__(self, text: str):
         self.text = text
+
+    @property
+    def is_this_word_exist(self):
+        analyzator = pymorphy3.MorphAnalyzer()
+        words = self.text.split(" ")
+        score_list = []
+        for word in words:
+            weight_word = analyzator.parse(word)
+            score_list.append(weight_word[0].score)
+        print(mean(score_list))
+        return mean(score_list) > 0.7
 
     @property
     def is_eng_symbol(self):
