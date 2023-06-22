@@ -1,5 +1,3 @@
-import pymorphy3
-
 from components import TextChecker
 
 
