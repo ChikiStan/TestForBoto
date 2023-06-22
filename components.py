@@ -18,8 +18,7 @@ class TextChecker:
         for word in words:
             weight_word = analyzator.parse(word)
             score_list.append(weight_word[0].score)
-        print(mean(score_list))
-        return mean(score_list) > 0.7
+        return mean(score_list) > 0.65
 
     @property
     def is_eng_symbol(self):
