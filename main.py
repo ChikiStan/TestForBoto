@@ -14,7 +14,6 @@ def check_message(text: TextChecker):
 
 
 if __name__ == "__main__":
-    dictionary = pymorphy3.MorphAnalyzer()
     message = input()
     text = TextChecker(message)
     print(check_message(text))
